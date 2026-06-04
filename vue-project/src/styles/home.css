@@ -1,0 +1,267 @@
+.home {
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('https://images.unsplash.com/photo-1530124566582-a618bc2615ad?q=80&w=1400') center/cover;
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-label {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: #ff6b00;
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Кнопки */
+.btn-main {
+  background: #ff6b00;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background: #b7410e;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff6b00;
+  color: #ff6b00;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 107, 0, 0.1);
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #1c1c1c;
+  border: 1px solid #b7410e;
+  border-radius: 16px;
+  margin: -80px auto 80px;
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.stat-card {
+  text-align: center;
+  border-right: 1px solid #333;
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  display: block;
+  font-size: 2.5rem;
+  color: #ff6b00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-desc {
+  color: #d4af37;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid Направлений */
+.section-title {
+  text-align: center;
+  color: #ff6b00;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 50px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #1c1c1c;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: 0.4s ease;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.feature-card:hover {
+  border-color: #ff6b00;
+  transform: translateY(-12px);
+  box-shadow: 0 10px 25px rgba(255, 107, 0, 0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #b7410e;
+}
+
+.feature-card h3 {
+  color: #d4af37;
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  padding: 0 20px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Visual Journal */
+.visual-journal {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.journal-header p {
+  margin-bottom: 40px;
+  color: #d4af37;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+}
+
+.grid-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.grid-item.tall {
+  grid-row: span 2;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.7s;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay-text {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6b00;
+}
+
+.grid-item:hover .overlay-text {
+  opacity: 1;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 1024px) {
+  .stats-bar {
+    width: 100%;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .stat-card {
+    border-right: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+  }
+
+  .stat-card:last-child {
+    border-bottom: none;
+  }
+
+  .journal-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .grid-item.tall {
+    height: 400px;
+  }
+
+  .grid-item {
+    height: 250px;
+  }
+}

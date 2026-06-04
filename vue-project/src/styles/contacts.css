@@ -1,0 +1,149 @@
+.contacts-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  flex: 1;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0b0b0b, #2a2a2a);
+  color: #e5e7eb;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.contacts h1 {
+  color: #ff6b00;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid #b7410e;
+  border-radius: 6px;
+  background: #1c1c1c;
+  color: #e5e7eb;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  background: #ff6b00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background: #d45500;
+}
+
+.success {
+  color: #4caf50;
+  margin-top: 12px;
+}
+
+.error {
+  color: #ff4c4c;
+  margin-top: 12px;
+}
+
+/* Адаптивность */
+@media (min-width: 1400px) {
+  .contacts {
+    max-width: 1400px;
+    padding: 60px 40px;
+  }
+  .contacts h1 {
+    font-size: 42px;
+  }
+  .contact-info p {
+    font-size: 22px;
+  }
+  .contact-form {
+    max-width: 700px;
+  }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    max-width: 90%;
+    padding: 30px 16px;
+  }
+  .contact-form {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    max-width: 95%;
+    padding: 24px 12px;
+  }
+  .contacts h1 {
+    font-size: 28px;
+  }
+  .contact-info p {
+    font-size: 16px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+  .contacts h1 {
+    font-size: 24px;
+  }
+  .contact-info p {
+    font-size: 14px;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
+}

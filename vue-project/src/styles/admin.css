@@ -1,0 +1,178 @@
+.admin {
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0b0b0b, #2a2a2a);
+  color: #e5e7eb;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.admin h1 {
+  color: #ff6b00;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-block {
+  margin-bottom: 40px;
+}
+
+/* Заголовки секций */
+.block-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1c1c1c;
+  padding: 12px;
+  border: 2px solid #b7410e;
+  border-radius: 8px;
+  color: #d4af37;
+  font-size: 20px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Список пользователей */
+.admin-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-block li {
+  background: #1c1c1c;
+  border: 2px solid #b7410e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-block .actions button {
+  background: #ff6b00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 8px;
+}
+
+.admin-block .actions button:hover {
+  background: #b7410e;
+}
+
+/* Заказы */
+.order-card {
+  background: #2a2a2a;
+  border: 2px solid #b7410e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 8px rgba(255, 107, 0, 0.4);
+}
+
+.order-card h3 {
+  color: #d4af37;
+}
+
+/* Форма добавления товара */
+.product-form {
+  background: #1c1c1c;
+  padding: 20px;
+  border: 2px solid #b7410e;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.4);
+  max-width: 600px;   /* ограничиваем ширину */
+  margin: 0 auto;     /* центрируем форму */
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b7410e;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e5e7eb;
+  box-sizing: border-box;
+}
+
+.btn-add {
+  background: linear-gradient(90deg, #ff6b00, #b7410e);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 20px auto 0; /* кнопка по центру */
+}
+
+.btn-add:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.6);
+}
+
+/* Анимация сворачивания */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .admin {
+    padding: 20px 10px;
+  }
+  .admin-block li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-card {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .product-form {
+    width: 95%;
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+}
