@@ -1,0 +1,27 @@
+name: CI Test
+
+# Когда запускать тесты
+on:
+  push:        # при каждом коммите
+    branches: [ "main" ]
+  pull_request: # при каждом Pull Request
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # виртуальная машина Ubuntu
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3   # забирает твой код из репозитория
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'        # версия Node.js
+
+    - name: Install dependencies
+      run: npm install            # установка зависимостей
+
+    - name: Run tests
+      run: npm test               # запуск тестов
